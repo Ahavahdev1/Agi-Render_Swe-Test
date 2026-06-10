@@ -1,8 +1,35 @@
+# IDEs & System
 .idea/
 .vscode/
+.DS_Store
+
+# Python & Build
 __pycache__/
+*.pyc
+*.pyo
 dist/
-.coverage*
-htmlcov/
+build/
+*.egg
+*.egg-info/
+
+# Virtual Envs (Impede o upload de pacotes pesados)
+venv/
+.venv/
+env/
+
+# MEA & SRE Exclusions (EXTREMAMENTE IMPORTANTES)
+.env                    # Impede o vazamento de chaves secretas para a nuvem
+.mea/                   # Ignora banco de dados local ativo e travas de arquivo .lock
+uploads/                # Ignora arquivos temporários recebidos
+workspace/              # Ignora a pasta de desenvolvimento de testes locais
+.aider.*                # Ignora logs e históricos locais do Aider
+
+# Tests & Coverage
 .tox/
+.cache/
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+*,cover
 docs/_build/
